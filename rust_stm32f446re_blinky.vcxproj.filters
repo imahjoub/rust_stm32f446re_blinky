@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\.cargo">
+      <UniqueIdentifier>{4d8726bf-41e3-447e-89dc-d9cab04db7bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\config">
+      <UniqueIdentifier>{e29eb381-5194-4a09-86ea-30b86aed0d20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\config\svd">
+      <UniqueIdentifier>{283ec662-4cb4-4f7b-b603-cc07ec69b6b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\examples">
+      <UniqueIdentifier>{435ec403-ba3a-4b49-a51d-7dd6356d5e22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_doc">
+      <UniqueIdentifier>{2f62c5a4-a19f-469f-ad77-6b8ab19a1aad}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".cargo\config.toml">
+      <Filter>Source Files\.cargo</Filter>
+    </None>
+    <None Include="config\svd\STM32F446.svd">
+      <Filter>Source Files\config\svd</Filter>
+    </None>
+    <None Include="examples\led_blinky.rs">
+      <Filter>Source Files\examples</Filter>
+    </None>
+    <None Include="build.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Cargo.toml">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="Embed.toml">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="memory.x">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="README.md">
+      <Filter>_doc</Filter>
+    </None>
+  </ItemGroup>
+</Project>
