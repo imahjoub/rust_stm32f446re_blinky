@@ -54,7 +54,7 @@
     <NMakeCleanCommandLine>
     </NMakeCleanCommandLine>
     <NMakeReBuildCommandLine>cargo.exe build --example led_blinky</NMakeReBuildCommandLine>
-    <NMakePreprocessorDefinitions>_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <OutDir>$(SolutionDir)target\$(Configuration)_$(Platform)</OutDir>
     <IntDir>$(SolutionDir)target\$(Configuration)_$(Platform)</IntDir>
   </PropertyGroup>
@@ -64,9 +64,16 @@
     <NMakeCleanCommandLine>
     </NMakeCleanCommandLine>
     <NMakeReBuildCommandLine>cargo.exe embed --example led_blinky</NMakeReBuildCommandLine>
-    <NMakePreprocessorDefinitions>NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <OutDir>$(SolutionDir)target\$(Configuration)_$(Platform)</OutDir>
+    <IntDir>$(SolutionDir)target\$(Configuration)_$(Platform)</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stm32f446re_blinky_build|x64'">
+    <BuildLog>
+      <Path>$(OutDir)$(MSBuildProjectName).log</Path>
+    </BuildLog>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='stm32f446re_blinky_flash|x64'">
     <BuildLog>
       <Path>$(OutDir)$(MSBuildProjectName).log</Path>
     </BuildLog>
