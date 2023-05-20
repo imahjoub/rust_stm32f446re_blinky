@@ -1,40 +1,44 @@
-on:
-  push:
-    branches: [ main ]
-  pull_request:
+name: ci
 
-name: rust_stm32f446re_blinky
+on: [push, pull_request]
+
+env:
+  CARGO_TERM_COLOR: always
+  RUSTFLAGS: -D warnings
 
 jobs:
-  ci:
+  format:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        mcu:
-          - stm32f446re
-        rust:
-          - stable
-        include:
-          - rust: nightly
-            mcu: stm32f446re
-            experimental: true
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Use the latest ${{ matrix.rust }} rustc
-        run: rustup update ${{ matrix.rust }} && rustup default ${{ matrix.rust }}
-      - name: Add Cortex-M4 target
-        run: rustup target add thumbv7m-none-eabi
-
-      - uses: actions-rs/cargo@v1
-        with:
-          command: check
-          args: --features=${{ matrix.mcu }},rt --examples
-
-      - uses: actions-rs/cargo@v1
-        with:
-        - name: Lib release
-          run: |
-            cargo build --release --verbose
-          #command: test
-          #args: --features=${{ matrix.mcu }} --target x86_64-unknown-linux-gnu --lib
+    - uses: actions/checkout@v3
+    - uses: actions-rs/toolchain@v1
+      with:
+        toolchain : stable
+        components: rustfmt
+    - uses: actions-rs/cargo@v1
+      with:
+        command: fmt
+        args: --all -- --check
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        target: thumbv7em-none-eabihf
+        override: true
+    - name: Prologue
+      run: cargo update
+    - name: Lib release
+      run: |
+        cargo build --release --verbose
+    - name: Lib debug
+      run: |
+        cargo build --verbose
+    - name: Examples release
+      run: |
+        cargo build --examples --release --verbose
+    - name: Examples debug
+      run: |
+        cargo build --examples --verbose
