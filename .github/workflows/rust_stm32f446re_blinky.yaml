@@ -1,0 +1,40 @@
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+name: rust_stm32f446re_blinky
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        mcu:
+          - stm32f446re
+        rust:
+          - stable
+        include:
+          - rust: nightly
+            mcu: stm32f446re
+            experimental: true
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use the latest ${{ matrix.rust }} rustc
+        run: rustup update ${{ matrix.rust }} && rustup default ${{ matrix.rust }}
+      - name: Add Cortex-M4 target
+        run: rustup target add thumbv7m-none-eabi
+
+      - uses: actions-rs/cargo@v1
+        with:
+          command: check
+          args: --features=${{ matrix.mcu }},rt --examples
+
+      - uses: actions-rs/cargo@v1
+        with:
+        - name: Lib release
+          run: |
+            cargo build --release --verbose
+          #command: test
+          #args: --features=${{ matrix.mcu }} --target x86_64-unknown-linux-gnu --lib
