@@ -1,8 +1,8 @@
 rust_stm32f446re_blinky
 =============================
 
-<p align="center">
 
+<p align="center">
     <a href="https://github.com/imahjoub/rust_stm32f446re_blinky/actions">
         <img src="https://github.com/imahjoub/rust_stm32f446re_blinky/actions/workflows/rust_stm32f446re_blinky.yml/badge.svg" alt="Build Status"></a>
     <a href="https://github.com/imahjoub/rust_stm32f446re_blinky/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">
