@@ -1,3 +1,22 @@
+rust_stm32f446re_blinky
+=============================
+
+<p align="center">
+
+    <a href="https://github.com/imahjoub/rust_stm32f446re_blinky/actions">
+        <img src="https://github.com/imahjoub/rust_stm32f446re_blinky/actions/workflows/rust_stm32f446re_blinky.yml/badge.svg" alt="Build Status"></a>
+    <a href="https://github.com/imahjoub/rust_stm32f446re_blinky/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">
+        <img src="https://custom-icon-badges.herokuapp.com/github/issues-raw/imahjoub/rust_stm32f446re_blinky?logo=github" alt="Issues" /></a>
+    <a href="https://github.com/imahjoub/rust_stm32f446re_blinky" alt="GitHub code size in bytes">
+        <img src="https://img.shields.io/github/languages/code-size/imahjoub/rust_stm32f446re_blinky" /></a>
+    <a href="https://github.com/imahjoub/rust_stm32f446re_blinky/blob/main/LICENSE_1_0.txt">
+        <img src="https://img.shields.io/badge/license-BSL%201.0-blue.svg" alt="Boost Software License 1.0"></a>
+    <a href="https://github.com/imahjoub/rust_stm32f446re_blinky" alt="Activity">
+        <img src="https://img.shields.io/github/commit-activity/y/imahjoub/rust_stm32f446re_blinky" /></a>
+</p>
+
+
+
 Using Rust to turn on an LED on the NUCLEO-F446RE by pressing a button
 
 This example is mainly copied from the great Rust Embedded [Cortex-M Quickstart](https://github.com/rust-embedded/cortex-m-quickstart)
