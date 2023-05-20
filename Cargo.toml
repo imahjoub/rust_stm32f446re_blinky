@@ -42,4 +42,4 @@ incremental = false
 
 [[bin]]
 name = "led_blinky"
-path = "src/led_blinky.rs"
+path = "examples/led_blinky.rs"
