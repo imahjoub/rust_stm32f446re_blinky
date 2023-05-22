@@ -19,9 +19,6 @@ rust_stm32f446re_blinky
 
 A mini application to demonstrate embedded development using Rust. Created using an NUCLEO-F446RE development board. Blinks an LED on pin PA5.
 
-This example is mainly copied from the great Rust Embedded [Cortex-M Quickstart](https://github.com/rust-embedded/cortex-m-quickstart)
-and Jesse Braham's article [Embedded Rust: From Zero to Blinky](https://beta7.io/posts/embedded-rust-from-zero-to-blinky.html)
-and tweaked for the STM32F446RE of the NUCLEO-F446RE board.
 
 prerequisites: rust, opencd
 
