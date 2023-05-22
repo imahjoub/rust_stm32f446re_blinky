@@ -19,7 +19,7 @@ rust_stm32f446re_blinky
 
 - The application uses Visual Studio as IDE to build source files and flash the board.
 
-- The repository provides a zipped cargo package located in `rust_stm32f446re_blinky\toolchain\cargo\bin.7z`.
+- The repository provides a compressed cargo package located in `rust_stm32f446re_blinky\toolchain\cargo\bin.7z`.
 Unpack the cargo package before building the application.
 
 
