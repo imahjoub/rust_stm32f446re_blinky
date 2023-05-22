@@ -17,7 +17,7 @@ rust_stm32f446re_blinky
 
 
 
-A mini application to demonstrate embedded development using Rust. Created using an NUCLEO-F446RE development board. Blinks an LED on pin PA5.
+A mini application to demonstrate embedded development using Rust. Created using a NUCLEO-F446RE development board. Blinks an LED on pin PA5.
 
 
 prerequisites: rust, opencd
