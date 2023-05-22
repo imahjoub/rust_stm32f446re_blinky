@@ -29,5 +29,11 @@ Unpack the cargo package before building the application.
   - Visual Studio
 
 ### Build the rust_stm32f446re_blinky application
+  - Open the solution rust_stm32f446re_blinky.sln in the ./rust_stm32f446re_blinky directory.
+  - Select the stm32f446re_blinky_build configuration.
+  - Then rebuild the entire solution.
 
 ### Flash NUCLEO-F446RE with rust_stm32f446re_blinky
+  - connect the NUCLEO-F446RE boards to your pc
+  - Select the stm32f446re_blinky_flash configuration.
+  - Then rebuild the entire solution.
