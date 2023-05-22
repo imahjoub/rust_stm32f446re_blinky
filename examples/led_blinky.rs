@@ -2,8 +2,9 @@
 #![no_main]
 #![no_std]
 
-#[allow(unused)]
-use panic_halt;
+//#[allow(unused)]
+//use panic_halt;
+
 
 use cortex_m_rt as rt;
 use stm32f4xx_hal as hal;
