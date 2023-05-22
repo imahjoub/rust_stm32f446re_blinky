@@ -52,21 +52,21 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stm32f446re_blinky_build|x64'">
-    <NMakeBuildCommandLine>cargo.exe build</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine>$(SolutionDir)toolchain\cargo\bin\cargo.exe build</NMakeBuildCommandLine>
     <NMakeOutput>rust_stm32f446re_blinky.exe</NMakeOutput>
     <NMakeCleanCommandLine>
     </NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>cargo.exe build</NMakeReBuildCommandLine>
+    <NMakeReBuildCommandLine>$(SolutionDir)toolchain\cargo\bin\cargo.exe build</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <OutDir>$(SolutionDir)target\$(Configuration)_$(Platform)</OutDir>
     <IntDir>$(SolutionDir)target\$(Configuration)_$(Platform)</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='stm32f446re_blinky_flash|x64'">
-    <NMakeBuildCommandLine>cargo.exe embed</NMakeBuildCommandLine>
+    <NMakeBuildCommandLine>$(SolutionDir)toolchain\cargo\bin\cargo.exe embed</NMakeBuildCommandLine>
     <NMakeOutput>rust_stm32f446re_blinky.exe</NMakeOutput>
     <NMakeCleanCommandLine>
     </NMakeCleanCommandLine>
-    <NMakeReBuildCommandLine>cargo.exe embed</NMakeReBuildCommandLine>
+    <NMakeReBuildCommandLine>$(SolutionDir)toolchain\cargo\bin\cargo.exe embed</NMakeReBuildCommandLine>
     <NMakePreprocessorDefinitions>$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
     <OutDir>$(SolutionDir)target\$(Configuration)_$(Platform)</OutDir>
     <IntDir>$(SolutionDir)target\$(Configuration)_$(Platform)</IntDir>
