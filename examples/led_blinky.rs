@@ -2,8 +2,8 @@
 #![no_main]
 #![no_std]
 
-//#[allow(unused)]
-//use panic_halt;
+#[allow(unused)]
+use panic_halt; // When a panic occurs, stop the microcontroller
 
 
 use cortex_m_rt as rt;
