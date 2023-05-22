@@ -12,16 +12,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include=".cargo\config.toml" />
-    <None Include=".github\workflows\rust_stm32f446re_blinky.yaml" />
+    <None Include=".github\workflows\rust_stm32f446re_blinky.yml" />
+    <None Include=".github\workflows\rust_stm32f446re_blinky_rustfmt.yml" />
     <None Include="Cargo.toml" />
     <None Include="config\svd\STM32F446.svd" />
     <None Include="Embed.toml" />
     <None Include="memory.x" />
     <None Include="README.md" />
     <None Include="src\led_blinky.rs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include=".github\workflows\rust_stm32f446re_blinky_rustfmt.yaml" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

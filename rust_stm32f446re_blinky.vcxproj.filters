@@ -46,16 +46,14 @@
     <None Include="README.md">
       <Filter>_doc</Filter>
     </None>
-    <None Include=".github\workflows\rust_stm32f446re_blinky.yaml">
-      <Filter>.github\workflows</Filter>
-    </None>
     <None Include="src\led_blinky.rs">
       <Filter>Source Files\src</Filter>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include=".github\workflows\rust_stm32f446re_blinky_rustfmt.yaml">
+    <None Include=".github\workflows\rust_stm32f446re_blinky.yml">
       <Filter>.github\workflows</Filter>
-    </ClCompile>
+    </None>
+    <None Include=".github\workflows\rust_stm32f446re_blinky_rustfmt.yml">
+      <Filter>.github\workflows</Filter>
+    </None>
   </ItemGroup>
 </Project>
