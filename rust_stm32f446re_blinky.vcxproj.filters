@@ -14,9 +14,6 @@
     <Filter Include="Source Files\config\svd">
       <UniqueIdentifier>{283ec662-4cb4-4f7b-b603-cc07ec69b6b2}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\examples">
-      <UniqueIdentifier>{435ec403-ba3a-4b49-a51d-7dd6356d5e22}</UniqueIdentifier>
-    </Filter>
     <Filter Include="_doc">
       <UniqueIdentifier>{2f62c5a4-a19f-469f-ad77-6b8ab19a1aad}</UniqueIdentifier>
     </Filter>
@@ -26,6 +23,9 @@
     <Filter Include=".github\workflows">
       <UniqueIdentifier>{cb19ba23-baeb-48aa-bc88-ec9df213f8c0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\src">
+      <UniqueIdentifier>{435ec403-ba3a-4b49-a51d-7dd6356d5e22}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include=".cargo\config.toml">
@@ -33,9 +33,6 @@
     </None>
     <None Include="config\svd\STM32F446.svd">
       <Filter>Source Files\config\svd</Filter>
-    </None>
-    <None Include="examples\led_blinky.rs">
-      <Filter>Source Files\examples</Filter>
     </None>
     <None Include="build.bat">
       <Filter>Source Files</Filter>
@@ -54,6 +51,9 @@
     </None>
     <None Include=".github\workflows\rust_stm32f446re_blinky.yaml">
       <Filter>.github\workflows</Filter>
+    </None>
+    <None Include="src\led_blinky.rs">
+      <Filter>Source Files\src</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>

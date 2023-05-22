@@ -1,45 +1,26 @@
+# Cargo.toml
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
 [package]
 name = "rust_stm32f466_blinky"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[profile.release]
+opt-level = 'z'             # turn on maximum optimizations.
+lto       = true            # Link-time-optimizations for further size reduction
 
 [dependencies]
-cortex-m-rt = "0.6.14"
-panic-halt = "0.2.0"
-stm32f4xx-hal = { version = "0.9.0", features = ["stm32f446", "rt"] }
-rtt-target = { version = "0.3.0", features = ["cortex-m"] }
-embedded-hal = "0.2.7"
-
-#[dependencies]
-#cortex-m = "0.7"
-#cortex-m-rt = "0.7"
-#stm32l4xx-hal = { version = "0.7.1", features = ["stm32f446", "rt"] }
-#rtt-target = { version = "0.3.0", features = ["cortex-m"] }
-#embedded-hal = "0.2.7"
+cortex-m     = "0.6.3"      # Access to the generic ARM peripherals
+cortex-m-rt  = "0.6.14"     # Startup code for the ARM Core
+embedded-hal = "0.2.7"      # Access to generic embedded functions (`set_high`)
+panic-halt   = "0.2.0"      # Panic handler
 
 
-[dev-dependencies]
+stm32f4xx-hal = { version = "0.9.0", features = ["stm32f446", "rt"] }  # Access to the stm32f466re HAL.
+rtt-target    = { version = "0.3.0", features = ["cortex-m"] }         # Access to RTT (Real-Time Transfer) I/O protocol
 
-[profile.dev]
-opt-level = 0
-debug = true
-debug-assertions = true
-overflow-checks = true
-lto = false
-panic = 'abort'
-incremental = true
-
-[profile.release]
-opt-level = "s"
-debug = false
-debug-assertions = false
-overflow-checks = false
-lto = true
-panic = 'abort'
-incremental = false
-
+# Binary target settings.
 [[bin]]
 name = "led_blinky"
-path = "examples/led_blinky.rs"
+path = "src/led_blinky.rs"

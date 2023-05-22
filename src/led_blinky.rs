@@ -1,16 +1,16 @@
 #![deny(unsafe_code)]
+// std and main are not available for bare metal software
 #![no_main]
 #![no_std]
 
 #[allow(unused)]
 use panic_halt; // When a panic occurs, stop the microcontroller
 
-
-use cortex_m_rt as rt;
+use cortex_m_rt::entry; // The runtime
 use stm32f4xx_hal as hal;
 use hal::prelude::*; // needed for the GpioExt trait (-> .split)
 
-#[rt::entry]
+#[entry]
 fn main() -> ! {
     if let Some(peripherals) = hal::stm32::Peripherals::take() {
         let gpioa = peripherals.GPIOA.split(); // + sets RCC->AHB1ENR GPIOA bit
