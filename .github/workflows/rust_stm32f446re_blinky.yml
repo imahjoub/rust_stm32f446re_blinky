@@ -22,15 +22,9 @@ jobs:
         override: true
     - name: Prologue
       run: cargo update
-    - name: Lib release
+    - name: rust_stm32f446re_blinky release
       run: |
         cargo build --release --verbose
-    - name: Lib debug
+    - name: rust_stm32f446re_blinky debug
       run: |
         cargo build --verbose
-    - name: Examples release
-      run: |
-        cargo build --examples --release --verbose
-    - name: Examples debug
-      run: |
-        cargo build --examples --verbose
