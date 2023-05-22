@@ -1,7 +1,6 @@
 rust_stm32f446re_blinky
 =============================
 
-
 <p align="center">
     <a href="https://github.com/imahjoub/rust_stm32f446re_blinky/actions">
         <img src="https://github.com/imahjoub/rust_stm32f446re_blinky/actions/workflows/rust_stm32f446re_blinky.yml/badge.svg" alt="Build Status"></a>
@@ -16,20 +15,15 @@ rust_stm32f446re_blinky
 </p>
 
 
-
 A mini application to demonstrate embedded development using Rust. Created using a NUCLEO-F446RE development board. Blinks an LED on pin PA5.
 
+The application uses Visual Studio as IDE to build source files and flash the board.
 
-prerequisites: rust, opencd
+## Using rust_stm32f446re_blinky
 
-0. `rustup target add thumbv7em-none-eabihf`
-1. `git clone https://github.com/krenzlin/rust-stm32f446-blinky`
-2. `cd rust-stm32f466-blinky`
-3. `cargo build`
-4. `sudo ./flash_device.sh target/thumbv7em-none-eabihf/debug/blinky`
-5. press the blue user button to turn on the LED
+### Required tools
+  - Visual Studio
 
-Troubleshooting:
+### Build the rust_stm32f446re_blinky application
 
-* try updating: `rustup update`
-
+### Flash NUCLEO-F446RE with rust_stm32f446re_blinky
