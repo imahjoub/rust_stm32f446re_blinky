@@ -15,11 +15,12 @@ rust_stm32f446re_blinky
 </p>
 
 
-A mini application to demonstrate embedded development using Rust. Created using a NUCLEO-F446RE development board. Blinks an LED on pin PA5.
+- A mini application to demonstrate embedded development using Rust. Created using a `NUCLEO-F446RE development board`. Blinks an LED on pin `PA5`.
 
-The application uses Visual Studio as IDE to build source files and flash the board.
+- The application uses Visual Studio as IDE to build source files and flash the board.
 
-The repository provides a zipped cargo package located in `rust_stm32f446re_blinky\toolchain\cargo\bin.7z`. Unpack the cargo package before building the application.
+- The repository provides a zipped cargo package located in `rust_stm32f446re_blinky\toolchain\cargo\bin.7z`.
+Unpack the cargo package before building the application.
 
 
 ## Using rust_stm32f446re_blinky
