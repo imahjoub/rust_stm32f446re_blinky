@@ -56,4 +56,9 @@
       <Filter>.github\workflows</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include=".github\workflows\rust_stm32f446re_blinky_rustfmt.yaml">
+      <Filter>.github\workflows</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

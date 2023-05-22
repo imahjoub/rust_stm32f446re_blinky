@@ -21,6 +21,9 @@
     <None Include="memory.x" />
     <None Include="README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include=".github\workflows\rust_stm32f446re_blinky_rustfmt.yaml" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <ProjectGuid>{4783176C-E255-45C1-92EA-FE758B84DB1E}</ProjectGuid>
