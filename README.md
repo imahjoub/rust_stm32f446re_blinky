@@ -28,6 +28,13 @@ Unpack the cargo package before building the application.
 ### Required tools
   - Visual Studio
 
+### cross compilation
+  - after you unzipp the bin folder, do open a CMD window in this folder and run following commands
+  - `ustup target add thumbv7em-none-eabihf `
+  - `argo install cargo-embed cargo-binutils`
+
+
+
 ### Build the rust_stm32f446re_blinky application
   - Open the solution `rust_stm32f446re_blinky.sln` in the `./rust_stm32f446re_blinky directory`.
   - Select the `stm32f446re_blinky_build` configuration.
