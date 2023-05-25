@@ -23,16 +23,19 @@ rust_stm32f446re_blinky
 Unpack the cargo package before building the application.
 
 
-## Using rust_stm32f446re_blinky
+## Using rust_stm32f446re_blinky with visual Studio (Windows)
 
 ### Required tools
   - Visual Studio
 
 ### cross compilation
-  - after you unzipp the bin folder, do open a CMD window in this folder and run following commands
-  - `ustup target add thumbv7em-none-eabihf `
-  - `argo install cargo-embed cargo-binutils`
-
+  - After unzipping the bin folder, open a CMD window in that folder and run the following commands
+  ```
+  ustup target add thumbv7em-none-eabihf
+  ```
+  ```
+  argo install cargo-embed cargo-binutils
+  ```
 
 
 ### Build the rust_stm32f446re_blinky application
@@ -44,3 +47,8 @@ Unpack the cargo package before building the application.
   - connect the NUCLEO-F446RE boards to your pc
   - Select the `stm32f446re_blinky_flash` configuration.
   - Then rebuild the entire solution.
+
+
+## Using rust_stm32f446re_blinky in *Unix
+
+
