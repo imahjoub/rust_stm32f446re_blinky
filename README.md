@@ -30,11 +30,10 @@ Unpack the cargo package before building the application.
 
 ### cross compilation
   - After unzipping the bin folder, open a CMD window in that folder and run the following commands
-  ```
+  ``
   - ustup target add thumbv7em-none-eabihf
   - argo install cargo-embed cargo-binutils
-  ```
-
+  ``
 
 ### Build the rust_stm32f446re_blinky application
   - Open the solution `rust_stm32f446re_blinky.sln` in the `./rust_stm32f446re_blinky directory`.
@@ -46,22 +45,21 @@ Unpack the cargo package before building the application.
   - Select the `stm32f446re_blinky_flash` configuration.
   - Then rebuild the entire solution.
 
-
 ## Using rust_stm32f446re_blinky in Linux
 
 ### Cross-compilation installation
-  ```
+  ``
   - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
   - rustup target add thumbv7em-none-eabihf
   - cargo install cargo-embed cargo-binutils
-  ```
+  ``
 
 ## Build application
-  ```
+  ``
   - cargo build
-  ```
+  ``
 
 ## flash target (NUCLEO-F446RE)
-  ```
+  ``
   - cargo embed
-  ```
+  ``
