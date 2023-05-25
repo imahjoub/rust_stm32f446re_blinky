@@ -32,8 +32,6 @@ Unpack the cargo package before building the application.
   - After unzipping the bin folder, open a CMD window in that folder and run the following commands
   ```
   ustup target add thumbv7em-none-eabihf
-  ```
-  ```
   argo install cargo-embed cargo-binutils
   ```
 
