@@ -47,6 +47,21 @@ Unpack the cargo package before building the application.
   - Then rebuild the entire solution.
 
 
-## Using rust_stm32f446re_blinky in *Unix
+## Using rust_stm32f446re_blinky in Linux
 
+### Cross-compilation installation
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup target add thumbv7em-none-eabihf
+cargo install cargo-embed cargo-binutils
+```
 
+## Build application
+```
+cargo build
+```
+
+## flash target (NUCLEO-F446RE)
+```
+cargo embed
+```
