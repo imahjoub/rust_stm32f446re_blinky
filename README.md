@@ -31,8 +31,9 @@ Unpack the cargo package before building the application.
 ### cross compilation
   - After unzipping the bin folder, open a CMD window in that folder and run the following commands
   ```
-  - ustup target add thumbv7em-none-eabihf
-  - argo install cargo-embed cargo-binutils
+  - rustup default stable
+  - rustup target add thumbv7em-none-eabihf
+  - cargo install cargo-embed cargo-binutils
   ```
 
 ### Build the rust_stm32f446re_blinky application
