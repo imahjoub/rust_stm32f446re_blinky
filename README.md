@@ -5,7 +5,7 @@ rust_stm32f446re_blinky
     <a href="https://github.com/imahjoub/rust_stm32f446re_blinky/actions">
         <img src="https://github.com/imahjoub/rust_stm32f446re_blinky/actions/workflows/rust_stm32f446re_blinky.yml/badge.svg" alt="Build Status"></a>
     <a href="https://github.com/imahjoub/rust_stm32f446re_blinky/actions">
-        <img src="https://github.com/imahjoub/rust_stm32f446re_blinky/actions/workflows/rust_stm32f446re_blinky_rustfmt.yml" alt="Rustfmt Status"></a>
+        <img src="https://github.com/imahjoub/rust_stm32f446re_blinky/actions/workflows/rust_stm32f446re_blinky_rustfmt_check.yml/badge.svg" alt="Rustfmt Status"></a>
     <a href="https://github.com/imahjoub/rust_stm32f446re_blinky/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">
         <img src="https://custom-icon-badges.herokuapp.com/github/issues-raw/imahjoub/rust_stm32f446re_blinky?logo=github" alt="Issues" /></a>
     <a href="https://github.com/imahjoub/rust_stm32f446re_blinky" alt="GitHub code size in bytes">
