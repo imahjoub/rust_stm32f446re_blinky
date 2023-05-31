@@ -31,7 +31,7 @@ Unpack the cargo package before building the application.
   - Visual Studio
 
 ### cross compilation
-  - After unpacking the zip folder (bin.7z), open a CMD window in that folder and run the following commands
+  - After unpacking the zip folder (bin.7z), open a CMD window and run the following commands
   ```
   - rustup default stable
   - rustup target add thumbv7em-none-eabihf
