@@ -1,4 +1,4 @@
-name: rust_stm32f446re_blinky_rustfmt
+name: rustfmt_check
 
 on:
   push:
