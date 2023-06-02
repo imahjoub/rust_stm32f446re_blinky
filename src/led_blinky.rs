@@ -5,6 +5,7 @@
 use cortex_m_rt::entry; // The runtime
 use hal::prelude::*;
 use panic_halt as _; // When a panic occurs, stop the microcontroller
+#[allow(unused_imports)]
 use rtt_target::{rprintln as log, rtt_init_print as log_init}; // For logging via SWD debug interface
 use stm32f4xx_hal as hal; // needed for the GpioExt trait (-> .split) // When a panic occurs, stop the microcontroller
 
@@ -13,9 +14,25 @@ use stm32f4xx_hal as hal; // needed for the GpioExt trait (-> .split) // When a 
 #[entry]
 fn main() -> ! {
     log_init!();
-    if let Some(peripherals) = hal::pac::Peripherals::take() {
-        // Set RCC->AHB1ENR GPIOA bit
-        let gpioa = peripherals.GPIOA.split();
+    if let (Some(device_peripherals), Some(core_peripherals)) = (
+        hal::pac::Peripherals::take(),
+        cortex_m::peripheral::Peripherals::take(),
+    ) {
+        // Core Clock Distribution and Reset
+        // Set System clock to run at 180 MHz
+        let cddr = device_peripherals
+            .RCC
+            .constrain()
+            .cfgr
+            .use_hse(8.MHz())
+            .sysclk(180.MHz())
+            .freeze();
+
+        // Use System clock as time base to blink LED
+        let mut sys_delay = core_peripherals.SYST.delay(&cddr);
+
+        // Set RCC->AHB1ENR GPIOA bits
+        let gpioa = device_peripherals.GPIOA.split();
 
         // .into_push_pull_output performs three steps
         // 1) set PUPDR: 00 -> no pull-up, no pull-down
@@ -28,7 +45,7 @@ fn main() -> ! {
             led.toggle();
             #[cfg(debug_assertions)] // Log only in debug builds
             log!("{:?}", led.get_state());
-            for _ in 0..50_000 {}
+            sys_delay.delay_ms(1_000_u16);
         }
     }
 
