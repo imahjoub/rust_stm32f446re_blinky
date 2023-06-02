@@ -18,4 +18,4 @@ enabled = true                       # the target will be reset after flashing.
 halt_afterwards = false              # Whether or not the target should be halted after reset.
 
 [default.rtt]
-enabled = false                      # Whether or not an RTTUI should be opened after flashing.
+enabled = true                    # Whether or not an RTTUI should be opened after flashing.
