@@ -2,23 +2,22 @@
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [package]
-name = "rust_stm32f466_blinky"
+name    = "rust_stm32f466_blinky"
 version = "0.1.0"
 edition = "2021"
 
 [profile.release]
-opt-level = 'z'             # turn on maximum optimizations.
-lto       = true            # Link-time-optimizations for further size reduction
+opt-level = 'z'                                                                    # turn on maximum optimizations.
+lto       = true                                                                   # Link-time-optimizations for further size reduction
 
 [dependencies]
-cortex-m = { version = "0.7.7", features = ["critical-section-single-core"] }  # Access to the generic ARM peripherals
-cortex-m-rt  = "0.7.3"      # Startup code for the ARM Core
-embedded-hal = "0.2.7"      # Access to generic embedded functions (`set_high`)
-panic-halt   = "0.2.0"      # Panic handler
+cortex-m     = { version = "0.7.7", features = ["critical-section-single-core"] }  # Access to the generic ARM peripherals
+cortex-m-rt  = "0.7.3"                                                             # Startup code for the ARM Core
+embedded-hal = "0.2.7"                                                             # Access to generic embedded functions (`set_high`)
+panic-halt   = "0.2.0"                                                             # Panic handler
 
-
-stm32f4xx-hal = { version = "0.16.0", features = ["stm32f446", "rt"] }  # Access to the stm32f466re HAL.
-rtt-target    = { version = "0.4.0"}         # Access to RTT (Real-Time Transfer) I/O protocol
+stm32f4xx-hal = { version = "0.16.0", features = ["stm32f446", "rt"] }             # Access to the stm32f466re HAL.
+rtt-target    = { version = "0.4.0"}                                               # Access to RTT (Real-Time Transfer) I/O protocol
 
 # Binary target settings.
 [[bin]]
