@@ -57,12 +57,18 @@ Unpack the cargo package before building the application.
   - cargo install cargo-embed cargo-binutils
   ```
 
-## Build application
+### Build application
   ```
   - cargo build
   ```
 
-## flash target (NUCLEO-F446RE)
+### flash target (NUCLEO-F446RE)
   ```
   - cargo embed
   ```
+
+## Continuous integration and quality
+Testing and continuous integration runs on GitHub Actions.
+
+An additional quality check (rustfmt) is performed on a pull request
+and merge to master.
