@@ -48,6 +48,7 @@ Unpack the cargo package before building the application.
   - Select the `stm32f446re_blinky_flash` configuration.
   - Then rebuild the entire solution.
 
+
 ## Using rust_stm32f446re_blinky in Linux
 
 ### Cross-compilation installation
@@ -56,12 +57,10 @@ Unpack the cargo package before building the application.
   - rustup target add thumbv7em-none-eabihf
   - cargo install cargo-embed cargo-binutils
   ```
-
 ### Build application
   ```
   - cargo build
   ```
-
 ### flash target (NUCLEO-F446RE)
   ```
   - cargo embed
@@ -70,5 +69,5 @@ Unpack the cargo package before building the application.
 ## Continuous integration and quality
 Testing and continuous integration runs on GitHub Actions.
 
-An additional quality check (rustfmt) is performed on a pull request
+An additional quality check [rustfmt](https://github.com/imahjoub/rust_stm32f446re_blinky/actions/workflows/rust_stm32f446re_blinky_rustfmt_check.yml) is performed on a pull request
 and merge to master.
