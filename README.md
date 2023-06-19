@@ -56,12 +56,10 @@ Unpack the cargo package before building the application.
   - rustup target add thumbv7em-none-eabihf
   - cargo install cargo-embed cargo-binutils
   ```
-
 ### Build application
   ```
   - cargo build
   ```
-
 ### flash target (NUCLEO-F446RE)
   ```
   - cargo embed
