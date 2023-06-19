@@ -48,6 +48,7 @@ Unpack the cargo package before building the application.
   - Select the `stm32f446re_blinky_flash` configuration.
   - Then rebuild the entire solution.
 
+
 ## Using rust_stm32f446re_blinky in Linux
 
 ### Cross-compilation installation
