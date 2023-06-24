@@ -44,7 +44,7 @@ Unpack the cargo package before building the application.
   - Then rebuild the entire solution.
 
 ### Flash NUCLEO-F446RE with rust_stm32f446re_blinky
-  - connect the NUCLEO-F446RE boards to your pc
+  - connect the NUCLEO-F446RE board to your pc
   - Select the `stm32f446re_blinky_flash` configuration.
   - Then rebuild the entire solution.
 
