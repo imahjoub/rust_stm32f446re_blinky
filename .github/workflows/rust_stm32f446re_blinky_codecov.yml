@@ -1,11 +1,9 @@
-name: rust_stm32f446re_blinky_codecov
-on:
-  push:
-    branches:
-      - '**'
-  pull_request:
-
 language: rust
+
+rust:
+  - stable
+  - beta
+  - nightly
 
 cache: cargo
 
