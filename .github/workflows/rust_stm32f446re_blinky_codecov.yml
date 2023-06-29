@@ -20,7 +20,7 @@ jobs:
         toolchain: nightly
         target: thumbv7em-none-eabihf
         override: true    
-    - name: Build
+    - name: rust_stm32f446re_blinky
       run: cargo build --verbose
       env:
         CARGO_INCREMENTAL: '0'
