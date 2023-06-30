@@ -19,7 +19,7 @@ jobs:
       with:
         toolchain: nightly
         target: thumbv7em-none-eabihf
-        override: true    
+        override: true
 
     - name: Prologue
       run: cargo update

@@ -55,5 +55,11 @@
     <None Include=".github\workflows\rust_stm32f446re_blinky_rustfmt_check.yml">
       <Filter>.github\workflows</Filter>
     </None>
+    <None Include=".travis.yml">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include=".github\workflows\rust_stm32f446re_blinky_codecov.yml">
+      <Filter>.github\workflows</Filter>
+    </None>
   </ItemGroup>
 </Project>
